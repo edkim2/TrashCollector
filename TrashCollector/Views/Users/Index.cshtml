@@ -5,3 +5,21 @@
 
 <h2>Index</h2>
 
+@if(ViewBag.displayMenu == "Yes")
+{
+    <h1>Welcome Administrator</h1>
+    <h2>
+        <li>@Html.ActionLink("View the customers", "Index", "Customers")</li>
+        <li>@Html.ActionLink("View the employees", "Index", "Employees")</li>
+    </h2>
+
+
+}
+
+else if(ViewBag.displayMenu == "Customer")
+{
+    <h2>Weclome <strong>@ViewBag.Name</strong></h2>
+    <h3>
+        <li>@Html.ActionLink("Check Account", "Details", "Customers")</li>
+    </h3>
+}
